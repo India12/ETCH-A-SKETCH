@@ -2,7 +2,7 @@
 
 Live preview: <a href= https://india12.github.io/ETCH-A-SKETCH/>Click here!</a>
 
-<h3>Project: Etch-A-Sketch<:/h3>
+<h3>Project: Etch-A-Sketch:</h3>
 - to improve DOM manipulation skills. </ br>
 - to improve CSS Grid understanding and usage.
 
