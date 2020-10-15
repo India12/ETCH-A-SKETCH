@@ -108,7 +108,7 @@ function createCustomGrid(customSize) {
         let gridItem = document.createElement('div');
         gridItem.classList.add('grid-item');
         grid.appendChild(gridItem); 
-    } 
+    }
     reset();
     colorGrid();
 }
@@ -138,14 +138,16 @@ function generateRandomColor() {
     }
     return color;
 }
+
 function darken() {
-    let gridItems = document.querySelectorAll('.grid-item');
+    let gridItems = document.querySelectorAll('.grid-item'); 
+
     gridItems.forEach((gridItem) => {
         gridItem.addEventListener('mouseover', () => {
             
             gridItem.counter = gridItem.counter || 0;
             gridItem.counter += 1;
-
+            
             if (gridItem.counter === 1) {
                 gridItem.style.background = '#000000';
                 gridItem.style.opacity = '0.1';
@@ -184,7 +186,6 @@ function darken() {
     });
 }
 
-// when pressed on reset, counter for darken()  doesn't start from zero
 function reset(){
     let gridItems = document.querySelectorAll('.grid-item');
     Array.from(gridItems).forEach(gridItem => 
@@ -195,11 +196,19 @@ function reset(){
             gridItem.style.opacity = '1';
         });
     });
-    
-    Array.from(gridItems).forEach(gridItem =>    
-        gridItem.counter = 0);
 
+    // not working!!!
+    //Array.from(gridItems).forEach(gridItem =>    
+    //    gridItem.counter = 0);      
 }
+function sampleFunction() {
+(() => {
+    setTimeout(() => {
+      document.getElementsByTagName("body")[0];
+    }, 50)
+  })();
+    location.reload();
+  }
 
 btn1.addEventListener('click', () => {
     createCustomGrid(16);
@@ -218,30 +227,10 @@ btn4.addEventListener('click', () => {
 colorInput.addEventListener('click', colorGrid);
 btn5.addEventListener('click', colorRainbowGrid);
 btn6.addEventListener('click', darken);
-btn7.addEventListener('click', reset);
 
-/*
-selectColorBox.addEventListener('click', function(e) {
-    let gridItems = document.querySelectorAll('.grid-item');
-    gridItems.forEach((gridItem) => { 
-        if (e.target.id == 'ci') {
-            gridItem.removeEventListener('mouseover', colorRainbowGrid);
-            gridItem.removeEventListener('mouseover', darken);
-            gridItem.addEventListener('click', colorGrid);
-        } else if (e.target.id == 'btn5') {
-            gridItem.removeEventListener('mouseover', colorGrid);
-            gridItem.removeEventListener('mouseover', darken);
-            gridItem.addEventListener('click', colorRainbowGrid);
-        } else if (e.target.id == 'btn6') {
-            gridItem.removeEventListener('mouseover', colorGrid);
-            gridItem.removeEventListener('mouseover', colorRainbowGrid);
-            gridItem.addEventListener('click', darken);
-        } else if (e.target.id == 'btn7') {
-            createCustomGrid(32);
-            colorGrid();
-        }
-    });
-});*/
+btn7.addEventListener('click', sampleFunction);
+btn7.addEventListener('click', reset);
 
 colorGrid();
 createCustomGrid(32);
+
