@@ -1,4 +1,4 @@
-<h1>The Odin Project Web Development</h1> <a href= https://www.theodinproject.com/courses/web-development-101/lessons/etch-a-sketch-project>Curriculum</a>
+<h1>The Odin Project Web Development</h1> <a href= https://www.theodinproject.com/home>Curriculum</a>
 
 Live preview: <a href= https://india12.github.io/ETCH-A-SKETCH/>Click here!</a>
 
